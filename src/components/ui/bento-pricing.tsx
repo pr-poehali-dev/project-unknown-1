@@ -172,7 +172,7 @@ export function BentoPricing() {
           "Никаких сложных настроек — просто работает",
         ]}
         className="lg:col-span-8"
-        cta="Попробовать"
+        cta="Получить доступ"
       />
     </div>
   )
