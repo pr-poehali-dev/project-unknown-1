@@ -3,13 +3,7 @@ import { FloatingNavbar } from "@/components/FloatingNavbar"
 import { ShinyButton } from "@/components/ui/shiny-button"
 import { Feature } from "@/components/ui/feature-with-advantages"
 import { BentoPricing } from "@/components/ui/bento-pricing"
-import { ContactCard } from "@/components/ui/contact-card"
 import { AboutQuote } from "@/components/ui/about-quote"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useEffect, useRef } from "react"
 
@@ -17,7 +11,6 @@ export default function Index() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const pricingSectionRef = useRef<HTMLDivElement>(null)
   const aboutSectionRef = useRef<HTMLDivElement>(null)
-  const contactSectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current
@@ -93,40 +86,12 @@ export default function Index() {
         }
       }
 
-      if (currentSection === 4 && contactSectionRef.current) {
-        const contactSection = contactSectionRef.current
-        const isAtTop = contactSection.scrollTop === 0
-        const isAtBottom = contactSection.scrollTop + contactSection.clientHeight >= contactSection.scrollHeight - 1
-
-        if (delta > 0 && !isAtBottom) {
-          return
-        }
-
-        if (delta < 0 && !isAtTop) {
-          return
-        }
-
-        if (delta < 0 && isAtTop) {
-          e.preventDefault()
-          scrollContainer.scrollTo({
-            left: 3 * containerWidth,
-            behavior: "smooth",
-          })
-          return
-        }
-
-        if (delta > 0 && isAtBottom) {
-          e.preventDefault()
-          return
-        }
-      }
-
       e.preventDefault()
 
       if (Math.abs(delta) > 10) {
         let targetSection = currentSection
         if (delta > 0) {
-          targetSection = Math.min(currentSection + 1, 4)
+          targetSection = Math.min(currentSection + 1, 3)
         } else {
           targetSection = Math.max(currentSection - 1, 0)
         }
@@ -240,88 +205,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section
-          id="contact"
-          ref={contactSectionRef}
-          className="relative min-w-full snap-start overflow-y-auto px-4 pt-24 pb-20"
-        >
-          <div
-            aria-hidden="true"
-            className={cn(
-              "absolute inset-0 z-0 size-full pointer-events-none",
-              "bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)]",
-              "bg-[size:12px_12px]",
-              "opacity-30",
-            )}
-          />
 
-          <div className="relative z-10 mx-auto w-full max-w-5xl mt-[5vh]">
-            <ContactCard
-              title="Есть вопросы?"
-              description="Напишите нам — ответим в течение 1 рабочего дня. Если результат не понравится в течение 7 дней — вернём деньги без вопросов."
-              contactInfo={[
-                {
-                  icon: MailIcon,
-                  label: "Поддержка",
-                  value: "support@kolorrecepty.ru",
-                },
-                {
-                  icon: PhoneIcon,
-                  label: "Телефон",
-                  value: "[ТЕЛЕФОН]",
-                },
-                {
-                  icon: MapPinIcon,
-                  label: "Гарантия",
-                  value: "7 дней — возврат денег",
-                  className: "col-span-2",
-                },
-              ]}
-            >
-              <form action="" className="w-full space-y-4">
-                <div className="flex flex-col gap-2">
-                  <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Имя
-                  </Label>
-                  <Input
-                    type="text"
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Email
-                  </Label>
-                  <Input
-                    type="email"
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Телефон
-                  </Label>
-                  <Input
-                    type="tel"
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label className="text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
-                    Сообщение
-                  </Label>
-                  <Textarea className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]" />
-                </div>
-                <Button
-                  className="w-full bg-white text-black hover:bg-gray-100 [text-shadow:_0_1px_2px_rgb(0_0_0_/_10%)] font-open-sans-custom"
-                  type="button"
-                >
-                  Отправить
-                </Button>
-              </form>
-            </ContactCard>
-          </div>
-        </section>
       </div>
     </main>
   )
