@@ -166,7 +166,7 @@ export default function Index() {
 
               <p className="mb-8 mx-auto max-w-2xl text-pretty leading-relaxed text-gray-300 [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-thin font-open-sans-custom tracking-wide leading-7 text-xl">
                 ИИ-ассистент для колориста — 3 параметра, и нейросеть выдаёт{" "}
-                <span className="font-serif italic">готовую формулу</span> с оксидом, временем выдержки и нюансами. Бесплатно через DeepSeek.
+                <span className="font-serif italic">готовую формулу</span> с оксидом, временем выдержки и нюансами.
               </p>
 
               <div className="flex justify-center">
