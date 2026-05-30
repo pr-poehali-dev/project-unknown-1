@@ -22,52 +22,72 @@ function Feature() {
               <div className="flex flex-row gap-6 w-full items-start">
                 <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
                 <div className="flex flex-col gap-1">
-                  <p className="text-white font-open-sans-custom">Натуральная база 1–10</p>
+                  <p className="text-white font-open-sans-custom">Натуральные волосы</p>
                   <p className="text-gray-300 text-sm font-open-sans-custom">
-                    Точные формулы для каждой глубины тона.
+                    Тон в тон, темнее или светлее до 3 тонов.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
                 <div className="flex flex-col gap-1">
-                  <p className="text-white font-open-sans-custom">Любой процент седины</p>
+                  <p className="text-white font-open-sans-custom">Окрашенная база</p>
                   <p className="text-gray-300 text-sm font-open-sans-custom">
-                    От 10% до 100% — подбор микстона и оксида.
+                    Совместимость оттенков, затемнение и осветление через порошок или аммиачный корректор.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
                 <div className="flex flex-col gap-1">
-                  <p className="text-white font-open-sans-custom">Пепельные оттенки</p>
+                  <p className="text-white font-open-sans-custom">Седина</p>
                   <p className="text-gray-300 text-sm font-open-sans-custom">
-                    Без зелени и грязи — ассистент знает подводные камни.
+                    До 30%, до 50%, 50% и более — точный подбор рецепта.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 w-full items-start">
                 <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
                 <div className="flex flex-col gap-1">
-                  <p className="text-white font-open-sans-custom">Окрашенная база</p>
-                  <p className="text-gray-300 text-sm font-open-sans-custom">Учитывает предыдущий пигмент и историю.</p>
-                </div>
-              </div>
-              <div className="flex flex-row gap-6 items-start">
-                <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
-                <div className="flex flex-col gap-1">
-                  <p className="text-white font-open-sans-custom">Граммы и время выдержки</p>
+                  <p className="text-white font-open-sans-custom">Пепельные и перламутровые</p>
                   <p className="text-gray-300 text-sm font-open-sans-custom">
-                    Соотношение краски и оксида для любой марки.
+                    Без зелени и грязи — ассистент знает все нюансы.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
                 <div className="flex flex-col gap-1">
-                  <p className="text-white font-open-sans-custom">Текст для клиента</p>
+                  <p className="text-white font-open-sans-custom">Блонд в тёмные оттенки</p>
                   <p className="text-gray-300 text-sm font-open-sans-custom">
-                    Готовое объяснение выбранного рецепта клиенту.
+                    Тонирование с препигментацией — без неожиданных результатов.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row gap-6 items-start">
+                <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
+                <div className="flex flex-col gap-1">
+                  <p className="text-white font-open-sans-custom">Декапирование</p>
+                  <p className="text-gray-300 text-sm font-open-sans-custom">
+                    Протокол кислотной смывки или порошка.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row gap-6 items-start">
+                <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
+                <div className="flex flex-col gap-1">
+                  <p className="text-white font-open-sans-custom">Цветовые бани</p>
+                  <p className="text-gray-300 text-sm font-open-sans-custom">
+                    Классическая, корректирующая, пигментирующая.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row gap-6 items-start">
+                <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white flex-shrink-0" strokeWidth={3} />
+                <div className="flex flex-col gap-1">
+                  <p className="text-white font-open-sans-custom">Замена микстона</p>
+                  <p className="text-gray-300 text-sm font-open-sans-custom">
+                    Как смешать красители вместо микстона.
                   </p>
                 </div>
               </div>
