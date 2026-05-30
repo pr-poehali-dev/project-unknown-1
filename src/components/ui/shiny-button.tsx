@@ -36,9 +36,9 @@ export const ShinyButton: React.FC<ShinyButtonProps> = ({ children, className, .
       {...props}
       className={cn(
         "relative rounded-lg px-8 py-4 uppercase tracking-wide overflow-hidden font-open-sans-custom text-xs scale-90",
-        "bg-white/20 backdrop-blur-sm border-2 border-white/30",
-        "shadow-[0_0_30px_rgba(255,255,255,0.4),inset_0_0_20px_rgba(255,255,255,0.1)]",
-        "hover:shadow-[0_0_50px_rgba(255,255,255,0.6),inset_0_0_30px_rgba(255,255,255,0.2)]",
+        "bg-white/20 backdrop-blur-sm border-2 border-rose-200/40",
+        "shadow-[0_0_30px_rgba(255,180,150,0.35),inset_0_0_20px_rgba(255,200,180,0.1)]",
+        "hover:shadow-[0_0_50px_rgba(255,180,150,0.55),inset_0_0_30px_rgba(255,200,180,0.2)]",
         "transition-all duration-300",
         className,
       )}
