@@ -11,6 +11,7 @@ export default function Index() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const pricingSectionRef = useRef<HTMLDivElement>(null)
   const aboutSectionRef = useRef<HTMLDivElement>(null)
+  const faqSectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current
@@ -86,12 +87,32 @@ export default function Index() {
         }
       }
 
+      if (currentSection === 4 && faqSectionRef.current) {
+        const faqSection = faqSectionRef.current
+        const isAtTop = faqSection.scrollTop === 0
+        const isAtBottom = faqSection.scrollTop + faqSection.clientHeight >= faqSection.scrollHeight - 1
+
+        if (delta > 0 && !isAtBottom) return
+        if (delta < 0 && !isAtTop) return
+
+        if (delta < 0 && isAtTop) {
+          e.preventDefault()
+          scrollContainer.scrollTo({ left: 3 * containerWidth, behavior: "smooth" })
+          return
+        }
+
+        if (delta > 0 && isAtBottom) {
+          e.preventDefault()
+          return
+        }
+      }
+
       e.preventDefault()
 
       if (Math.abs(delta) > 10) {
         let targetSection = currentSection
         if (delta > 0) {
-          targetSection = Math.min(currentSection + 1, 3)
+          targetSection = Math.min(currentSection + 1, 4)
         } else {
           targetSection = Math.max(currentSection - 1, 0)
         }
@@ -203,6 +224,45 @@ export default function Index() {
           </div>
         </section>
 
+        <section
+          id="faq"
+          ref={faqSectionRef}
+          className="relative min-w-full snap-start overflow-y-auto px-4 pt-24 pb-20 hide-scrollbar"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          <div
+            aria-hidden="true"
+            className={cn(
+              "absolute inset-0 z-0 size-full pointer-events-none",
+              "bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)]",
+              "bg-[size:12px_12px]",
+              "opacity-30",
+            )}
+          />
+          <div className="relative z-10 mx-auto w-full max-w-3xl">
+            <div className="mx-auto mb-10 max-w-2xl text-center">
+              <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
+                Частые вопросы
+              </h1>
+            </div>
+            <div className="flex flex-col gap-4">
+              {[
+                { q: "Нужно ли платить за сам чат DeepSeek?", a: "Нет. DeepSeek полностью бесплатный." },
+                { q: "Сложно ли настроить?", a: "Нет. Скопировали, вставили, пользуетесь." },
+                { q: "Это разовая покупка или подписка?", a: "Разовая. Никаких ежемесячных списаний." },
+                { q: "Подходит под мою марку краски?", a: "Да. Промт работает с любой профессиональной краской." },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="rounded-xl border-2 border-white/10 bg-white/5 backdrop-blur-sm px-6 py-5"
+                >
+                  <p className="text-white font-open-sans-custom font-semibold mb-2">{item.q}</p>
+                  <p className="text-gray-300 font-open-sans-custom text-sm">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
       </div>
     </main>
