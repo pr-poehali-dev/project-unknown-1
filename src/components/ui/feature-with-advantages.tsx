@@ -11,7 +11,7 @@ function Feature() {
           </div>
           <div className="flex gap-2 flex-col">
             <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-open-sans-custom text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)]">
-              Что умеет ваш новый ассистент
+              Что умеет ваш новый ИИ-Ассистент
             </h2>
             <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-gray-300 font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
               Пишете 3 параметра — нейросеть выдаёт чёткий рабочий рецепт. Никаких «на глаз», смывок и недовольных клиентов.
