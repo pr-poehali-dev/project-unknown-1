@@ -16,9 +16,9 @@ export function LiquidMetalBackground() {
     <div className="absolute inset-0 -z-10">
       <Warp
         style={{ width: "100%", height: "100%" }}
-        color1="hsla(240, 60%, 5%, 1)"
-        color2="hsla(330, 60%, 25%, 1)"
-        color3="hsla(20, 70%, 45%, 1)"
+        color1="hsla(345, 85%, 5%, 1)"
+        color2="hsla(345, 80%, 26%, 1)"
+        color3="hsla(15, 65%, 40%, 1)"
         scale={0.5}
         rotation={0}
         speed={0.15}

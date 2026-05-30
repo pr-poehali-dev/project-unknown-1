@@ -63,7 +63,7 @@ export function FloatingNavbar() {
           {/* CTA Button */}
           <Button
             size="sm"
-            className="bg-white text-black hover:bg-gray-100 [text-shadow:_0_1px_2px_rgb(0_0_0_/_10%)] font-open-sans-custom"
+            className="bg-[#7c0a2b] text-white hover:bg-[#9a0d36] border border-[#7c0a2b] font-open-sans-custom"
           >
             Получить доступ
           </Button>

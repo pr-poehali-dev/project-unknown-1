@@ -100,7 +100,7 @@ export function BentoPricing() {
             <SparklesIcon className="me-1 size-3" /> Один раз навсегда
           </Badge>
           <div className="ml-auto">
-            <Button size="sm" className="bg-white text-black hover:bg-gray-100 font-open-sans-custom text-xs">
+            <Button size="sm" className="bg-[#7c0a2b] text-white hover:bg-[#9a0d36] font-open-sans-custom text-xs">
               Получить доступ
             </Button>
           </div>
