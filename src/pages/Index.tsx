@@ -158,7 +158,7 @@ export default function Index() {
         <section id="home" className="flex min-w-full snap-start items-center justify-center px-4 py-20">
           <div className="mx-auto max-w-4xl">
             <div className="text-center px-0 leading-5">
-              <h1 className="mb-8 text-balance text-5xl tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-6xl lg:text-8xl">
+              <h1 className="mb-8 text-balance text-4xl tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-5xl lg:text-6xl">
                 <span className="font-open-sans-custom not-italic">Перестаньте</span>{" "}
                 <span className="font-serif italic">гадать.</span>{" "}
                 <span className="font-open-sans-custom not-italic">Получите рецепт.</span>
